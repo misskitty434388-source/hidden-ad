@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="margin:0; padding:0; text-align:center; font-family:sans-serif; background:#fff;">
+
+<h3>⏳ Please wait</h3>
+<p id="timer" style="font-size:22px;">30</p>
+
+<script src="https://pl28600965.effectivegatecpm.com/c3/31/dd/c331dd1dc95d1a0282d292d3ab06fc67.js"></script>
+
+<script>
+let timeLeft = 30;
+let uid = new URLSearchParams(window.location.search).get("uid");
+
+let countdown = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timer").innerText = timeLeft;
+
+    if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href =
+          "https://t.me/earn_now_247_bot?start=claim_" + uid;
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
